@@ -22,12 +22,39 @@
 
       <div id="lastNameField" name="nameField">
         <label for="lname">Last name:</label><br />
-        <input type="text" id="lname" name="lname" /><br />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="optional"
+        /><br />
+      </div>
+
+      <div id="emailField" name="emailField">
+        <label for="email">Email:*</label><br />
+        <input type="email" id="email" name="email" required /><br />
+      </div>
+
+      <div id="passwordField" name="passwordField">
+        <label for="email">Password:*</label><br />
+        <input type="password" id="password" name="password" required /><br />
+      </div>
+
+      <div id="dobField" name="dobField">
+        <label for="dob">DOB:</label><br />
+        <input type="date" id="dob" name="dob" /><br />
       </div>
 
       <div id="ageField" name="ageField">
         <label for="age">Age:</label><br />
-        <input type="number" id="age" name="age" /><br />
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="0"
+          max="150"
+          value="0"
+        /><br />
       </div>
 
       <div id="genderField" name="genderField">
@@ -78,14 +105,15 @@
         <textarea name="bio" id="bio" cols="30" rows="5"> </textarea>
       </div>
 
-      <div id="emailField" name="emailField">
-        <label for="email">Email:*</label><br />
-        <input type="email" id="email" name="email" required /><br />
-      </div>
-
-      <div id="passwordField" name="passwordField">
-        <label for="email">Password:*</label><br />
-        <input type="password" id="password" name="password" required /><br />
+      <div id="helplineDetails" name="helplineDetails">
+        <label for="helplineNumber">Helpline:</label><br />
+        <input
+          type="text"
+          id="helplineNumber"
+          name="helplineNumber"
+          readonly
+          value="1234567890"
+        /><br />
       </div>
 
       <div id="submitButton">
