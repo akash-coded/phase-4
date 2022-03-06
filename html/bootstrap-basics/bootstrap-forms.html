@@ -16,7 +16,7 @@
   <body>
     <main class="col-md-5 mx-auto">
       <header class="text-center">
-        <h1 class="text-primary text-uppercase">Register</h1>
+        <h1 class="display-4 text-primary text-uppercase">Register</h1>
         <h6 class="text-secondary">Provide your details</h6>
       </header>
       <hr />
@@ -25,7 +25,7 @@
         <form action="register-backend" method="GET" class="font-weight-bold">
           <!-- Name (firstname and lastname) -->
           <div id="name" name="name" class="row form-group">
-            <div id="firstNameField" name="nameField" class="col-lg-4">
+            <div id="firstNameField" name="nameField" class="col-lg-6">
               <label for="fname">First name:*</label><br />
               <input
                 type="text"
@@ -37,12 +37,11 @@
                 required
               />
             </div>
-            <div id="lastNameField" name="nameField" class="col-lg-8">
+            <div id="lastNameField" name="nameField" class="col-lg-6">
               <label for="lname">Last name:</label><br />
               <input type="text" id="lname" name="lname" class="form-control" />
             </div>
           </div>
-          </form>
 
           <!-- Email -->
           <div id="emailField" name="emailField" class="form-group">
@@ -95,7 +94,7 @@
 
           <!-- Gender -->
           <div id="genderField" name="genderField" class="form-group">
-            <label for="genderOption">Gender:</label><br />
+            <label for="gender">Gender:</label><br />
             <div class="font-weight-normal" id="gender" name="gender">
               <div class="form-check form-check-inline">
                 <input type="radio" name="gender" id="male" value="male" />
@@ -211,7 +210,7 @@
               name="profilePicture"
               id="profilePicture"
               class="form-control-file"
-              accept=".pdf"
+              accept=".jpg"
             />
           </div>
 
@@ -220,7 +219,7 @@
             <input
               type="registration"
               value="Register"
-              class="btn btn-block btn-primary mb-2"
+              class="btn btn-block btn-primary my-4"
             />
           </div>
         </form>
