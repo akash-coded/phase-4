@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap Registration Form</title>
+    <title>Registration Form</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    <main class="col-md-5 mx-auto">
+    <main class="col-md-5 mx-auto mt-4">
       <header class="text-center">
         <h1 class="display-4 text-primary text-uppercase">Register</h1>
         <h6 class="text-secondary">Provide your details</h6>
@@ -26,26 +26,25 @@
           <!-- Name (firstname and lastname) -->
           <div id="name" name="name" class="row form-group">
             <div id="firstNameField" name="nameField" class="col-lg-6">
-              <label for="fname">First name:*</label><br />
+              <label for="fname">First name*</label><br />
               <input
                 type="text"
                 id="fname"
                 name="fname"
                 class="form-control"
-                autocomplete="off"
                 autofocus
                 required
               />
             </div>
             <div id="lastNameField" name="nameField" class="col-lg-6">
-              <label for="lname">Last name:</label><br />
+              <label for="lname">Last name</label><br />
               <input type="text" id="lname" name="lname" class="form-control" />
             </div>
           </div>
 
           <!-- Email -->
           <div id="emailField" name="emailField" class="form-group">
-            <label for="email">Email:*</label><br />
+            <label for="email">Email*</label><br />
             <input
               type="email"
               id="email"
@@ -55,22 +54,23 @@
               required
             />
             <small id="emailFieldHelp" class="form-text text-muted"
-              >Your email is safe with us :)</small
+              >Your email is safe with us</small
             >
           </div>
 
           <!-- Password -->
           <div id="passwordField" name="passwordField" class="form-group">
-            <label for="password">Password:*</label><br />
+            <label for="password">Password*</label><br />
             <input
               type="password"
               id="password"
               name="password"
               class="form-control"
+              placeholder="Type password"
               required
             />
             <small id="passwordHelp" class="form-text text-muted"
-              ><ul>
+              ><ul style="padding: 0; list-style: inside">
                 <li>Password should be between 8-16 characters</li>
                 <li>
                   Password should contain both lowercase and uppercase alphabets
@@ -80,16 +80,38 @@
             >
           </div>
 
+          <!-- Confirm Password -->
+          <div
+            id="confirmPasswordField"
+            name="confirmPasswordField"
+            class="form-group"
+          >
+            <label for="confirmPassword">Confirm Password*</label><br />
+            <input
+              type="confirmPassword"
+              id="confirmPassword"
+              name="confirmPassword"
+              class="form-control"
+              placeholder="Re-type password"
+              required
+            />
+          </div>
+
           <!-- Date of Birth -->
           <div id="dobField" name="dobField" class="form-group">
             <label for="dob">Date of Birth:</label><br />
             <input type="date" id="dob" name="dob" class="form-control" />
           </div>
 
-          <!-- Age -->
-          <div id="ageField" name="ageField" class="form-group">
-            <label for="age">Age:</label><br />
-            <input type="number" id="age" name="age" class="form-control" />
+          <!-- Country -->
+          <div id="countryField" name="countryField" class="form-group">
+            <label for="country">Country:</label><br />
+            <select name="country" id="country" class="form-control">
+              <option value="india" selected>India</option>
+              <option value="australia">Australia</option>
+              <option value="england">England</option>
+              <option value="south-africa">South Africa</option>
+            </select>
           </div>
 
           <!-- Gender -->
@@ -195,42 +217,6 @@
                 >
               </div>
             </div>
-          </div>
-
-          <!-- Country -->
-          <div id="countryField" name="countryField" class="form-group">
-            <label for="country">Country:</label><br />
-            <select name="country" id="country" class="form-control">
-              <option value="india" selected>India</option>
-              <option value="australia">Australia</option>
-              <option value="england">England</option>
-              <option value="south-africa">South Africa</option>
-            </select>
-          </div>
-
-          <!-- Bio -->
-          <div id="bioField" name="bioField" class="form-group">
-            <label for="bio">Bio:</label><br />
-            <textarea
-              name="bio"
-              id="bio"
-              rows="5"
-              class="form-control"
-              placeholder="Please introduce yourself"
-            >
-            </textarea>
-          </div>
-
-          <!-- Profile Picture Upload -->
-          <div id="profilePicField" class="form-group">
-            <label for="profilePicture">Upload a photo:</label><br />
-            <input
-              type="file"
-              name="profilePicture"
-              id="profilePicture"
-              class="form-control-file"
-              accept=".jpg"
-            />
           </div>
 
           <!-- Submit Button -->
