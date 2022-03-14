@@ -9,6 +9,26 @@
   <body>
     <p>Demo for callback functions</p>
 
-    <script src="../../js/functions/callback-functions.js"></script>
+    <script type="module">
+      import {
+        showOk,
+        showCancel,
+        ask,
+      } from "../../js/functions/callback-functions.js";
+
+      // usage: functions showOk, showCancel are passed as arguments to ask
+      ask("Do you agree?", showOk, showCancel);
+
+      // using function expressions (anonymous functions) as callback functions
+      ask(
+        "Do you like ice-cream?",
+        function () {
+          alert("Good choice!");
+        },
+        function () {
+          alert("Try one");
+        }
+      );
+    </script>
   </body>
 </html>

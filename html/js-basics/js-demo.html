@@ -11,8 +11,11 @@
 
     <!-- Internal JS -->
     <script>
-      document.addEventListener("DOMContentLoaded", function (event) {
-        alert("Hello world!");
+      document.addEventListener("readystatechange", function (event) {
+        console.log(event.target.readyState); // check for more states
+        if (event.target.readyState === "complete") {
+          alert("Hello world!");
+        }
       });
     </script>
   </body>
