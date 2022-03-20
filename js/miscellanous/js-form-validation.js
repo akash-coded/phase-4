@@ -56,5 +56,6 @@ function validateFormInputs() {
   email = email.trim();
   email = escapeHtml(email);
 
+  // input validation
   return checkInputEmail(email);
 }
